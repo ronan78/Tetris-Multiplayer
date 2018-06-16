@@ -1,0 +1,59 @@
+
+
+body {
+ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,89,195,1) 0%, rgba(18,18,204,1) 48%, rgba(22,121,142,1) 100%);
+}
+
+a {
+  color: white;
+  font-size: 15px;
+  text-decoration:none;
+}
+
+table.steelBlueCols {
+  border: 1px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.steelBlueCols tbody td {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.steelBlueCols td:nth-child(even) {
+  background: #398AA4;
+}
+table.steelBlueCols thead {
+  background: #398AA4;
+  border-bottom: 1px solid #398AA4;
+}
+table.steelBlueCols thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #398AA4;
+}
+table.steelBlueCols thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}

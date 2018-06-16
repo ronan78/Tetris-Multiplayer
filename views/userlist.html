@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Liste d'utilisateur{% endblock %}</title>
+    <link rel="stylesheet" href="public/liste.css">
+
+  </head>
+  <body>
+    <center>
+{% block main %}
+   {% block menu %}
+    <menu> 
+     {% if current %}
+    <p>
+      Bonjour {{name}}, 
+      <a href="/logout">Disconnect</a>
+    </p>
+    {% endif %}
+    </menu>
+    {% endblock %}
+    
+  <table class="steelBlueCols">
+    <thead>
+  <tr>
+    <th>Login</th>
+    <th>Win</th>
+    <th>Lose</th>
+  </tr>
+      </thead>
+    <tbody>
+{% for user in users %}
+  <tr {% if user.name == current.name %}class="current"{% endif %} >
+    <td>{{ user.login }}</td>
+    <td>{{ user.win}}</td>
+    <td>{{ user.lose}}</td>
+
+  </tr>
+      </tbody>
+{% endfor %}
+
+{% endblock %}
+    </table>
+      <br/> <br/>
+    <a href="/addlobby"> Ajouter un lobby </a> <br/> <br/>
+    <a href="/listelobby"> Liste Lobby </a>
+      </center>
+  </body>
+</html>
