@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Liste des lobbies {%endblock%}</title>
+    <link rel="stylesheet" href="public/liste.css">
+
+  </head>
+  <body>
+    <center>
+{% block main %}
+   {% block menu %}
+    <menu> 
+     {% if current %}
+    <p>
+      Bonjour {{name}}, 
+      <a href="/logout">Disconnect</a>
+    </p>
+    {% endif %}
+    </menu>
+   
+  <table class="steelBlueCols">
+    <thead>
+  <tr>
+    
+    <th>URL</th>
+  </tr>
+    </thead>
+    <tbody>
+{% for l in lobbies %}
+  <tr>
+    <td> <a href = {{l.url}}> {{l.id}} </td>
+  </tr>
+    {% endfor %}
+ {% endblock %}
+</tbody>
+    </table>
+    <br/> <br/>
+    <a href="/userlist"> Liste des utilisateurs </a>
+      </center>
+  </body>
+{% endblock %}
+</html>
